@@ -1,0 +1,46 @@
+body {
+    --cell-height: 100px;
+    --cell-border-size: 1px;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    background-color: black;
+    color: white;
+    margin: var(--cell-height) auto 0 auto;
+    position: relative;
+    width: calc(3 * var(--cell-height));
+}
+
+.board {
+    display: flex;
+    font-size: 80px;
+    flex-wrap: wrap;
+}
+
+.cell {
+    border: var(--cell-border-size) solid white;
+    flex: 1 1 30%;
+    height: var(--cell-height);
+    line-height: var(--cell-height);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.message {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    font-size: 40px;
+    height: var(--cell-height);
+    line-height: var(--cell-height);
+    position: absolute;
+    text-align: center;
+    
+    top: calc(var(--cell-height) + 3 * var(--cell-border-size));
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
