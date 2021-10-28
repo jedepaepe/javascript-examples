@@ -1,0 +1,25 @@
+<!--
+    Exemple pour montrer comme modifier le style en utilisant les class css.
+    Note:
+        L'exemple ici ne suit pas la bonne pratique "fichiers séparés pour le css & le javascript"
+        pour faciliter la lecture.
+        Cette bonne pratique est respecté dans le code class.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background color</title>
+    <style>
+        .background-holiday {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.body.className += 'background-holiday';
+    </script>
+</body>
+</html>

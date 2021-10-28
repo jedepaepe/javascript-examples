@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    demo 1 - javascript embarqué
+    Le javascript est embarqué dans la page web
+    avec la balise <script>.
+
+    ici nous assignons le texte '<h1>Hello Javascript</h1>'
+    à document.body.innerHTML
+
+    document est le document DOM, ou peut dire le document HTML
+    document.body est l'élément <body> du document
+    document.body.innerHTML est le contenu HTML de la page
+
+    lorsque nous assignons une valeur à document.body.innerHTML,
+    le browser effectue
+    1) il fabrique le DOM correspondant (il traduit l'HTML en des objets en mémoire)
+    2) il effectue le rendu (renderer) (traduit le DOM en un affichage graphique)
+    (exactement comme quand il exécute un "fichier" HTML)
+
+    Notons que la bonne pratique consiste à placer le javascript dans un fichier séparé,
+    comme illustré dans la démo suivante.
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo 1</title>
+</head>
+<body>
+    <script>
+        document.body.innerHTML = '<h1>Hello Javascript</h1>';
+    </script>
+</body>
+</html>

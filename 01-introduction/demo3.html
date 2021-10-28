@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>démo 2</title>
+</head>
+<body>
+    <script>
+        let h1 = document.createElement('h1');
+        document.body.append(h1);
+        h1.innerText = 'titre principal';
+        
+        let div = document.createElement('div');
+        document.body.append(div);
+
+        let h2 = document.createElement('h2');
+        h2.innerText = 'titre secondaire';
+        div.append(h2);
+
+        let p = document.createElement('p');
+        p.innerText = 'Ceci est un long paragraphe super intéressant ...';
+        div.append(p);
+    </script>
+</body>
+</html>
