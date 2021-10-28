@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 20 div de gris différents</title>
+</head>
+<body>
+    <script>
+        for(let i = 0; i <= 20; ++i) {
+            let div = document.createElement("div");
+            div.innerText = "hello";
+            let color = i / 20 * 255;
+            div.style.backgroundColor = `rgb(${color}, ${255 - color}, 0)`;
+            document.body.append(div);
+        }
+    </script>
+</body>
+</html>
