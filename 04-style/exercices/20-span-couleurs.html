@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 20 span colorés</title>
+</head>
+<body>
+    <script>
+        for(let i = 1; i <= 20; ++i) {
+            let span = document.createElement("span");
+            span.innerText = `span ${i} `;
+            span.style.color = (i % 2 === 0) ? "blue": "orange";
+            document.body.append(span);
+        }
+    </script>
+</body>
+</html>
