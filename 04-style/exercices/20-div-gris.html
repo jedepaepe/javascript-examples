@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 div gris</title>
+</head>
+<body>
+    <script>
+        for(let i = 0; i <= 20; ++i) {
+            let div = document.createElement('div');
+            document.body.append(div);
+            div.innerText = 'hello';
+            let color = i * 255 / 20;
+            div.style.backgroundColor = `rgb(${color}, ${color}, ${color})`;
+        }
+    </script>
+</body>
+</html>
