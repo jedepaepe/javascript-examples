@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // avec double guillements
+        let str1 = "hello javascript";
+        // avec simple guillements (équivalent)
+        let str2 = 'hello javascript';
+        // avec accents grave ( alt gr + µ)
+        let str3 = `hello javascript`;
+
+        let day = 28;
+        let month = 'octobre';
+        let year = 2021;
+        document.body.innerHTML = "<h3>Nous sommes le " + day + " " + month + " " + year + "</h3>";
+        document.body.innerHTML += `<h3>Nous sommes le ${day} ${month} ${year}</h3>`;
+    </script>
+</body>
+</html>
