@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Event</title>
+    <style>
+        .button {
+            border: 2px darkblue solid;
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Démo événement - propriété</h1>
+    <p>
+        La fonction est liée à l'événement par l'utilisation de la méthode addEventListener.
+    </p>
+    <p>
+        C'est la méthode la plus récente et préférée.
+    </p>
+    <button id="button-coucou" class="button">
+        fait coucou
+    </button>
+    <button id="button-write" class="button">
+        écrit du texte
+    </button>
+
+    <script>
+        let buttonCoucou = document.getElementById('button-coucou');
+        buttonCoucou.addEventListener('click', doCoucou);
+
+        let buttonWrite = document.getElementById('button-write');
+        buttonWrite.addEventListener('click', writeParagraph);
+
+        function doCoucou() {
+            alert('coucou');
+        }
+
+        function writeParagraph() {
+            let p = document.createElement('p');
+            p.innerText = "Ceci est un paragraphe créé dynamiquement";
+            document.body.append(p);
+        }
+
+    </script>
+</body>
+</html>

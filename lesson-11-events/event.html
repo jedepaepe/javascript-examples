@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 20px">
+    <h1>argument event</h1>
+    <p>
+        Le moteur javascript appellle notre fonction
+        en lui passant un argument "event"
+        qui décrit l'événement.
+    </p>
+    <p>
+        Dans le cas d'un PointerEvent (événement généré par la souris),
+        l'objet "event" a les propriétés "clientX", "clientY", "offsetX", "offsetY"
+        qui indique la position de la souris (par rapport à la fenêtre ou par rapport à l'Element source de l'événement).
+    </p>
+    <div id="app" style="height: 500px; background-color: bisque;"></div>
+    <script>
+        let app = document.getElementById('app');
+        app.onclick = debugEvent;
+
+        function debugEvent(event) {
+            console.log(event);
+            console.log(event.clientX, event.clientY);
+            console.log(event.offsetX, event.offsetY);
+        }
+    </script>
+</body>
+</html>
