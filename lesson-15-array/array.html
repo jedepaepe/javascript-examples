@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         let uneListe = [];  // crée une liste vide
@@ -13,9 +15,9 @@
         uneListe.push(true);
         uneListe.push('Hello world');
         uneListe.push({ name: 'Alexander', business: 'Politic' });
-        uneListe.push( [ 20, 200, 2000, 0 ]);
+        uneListe.push([20, 200, 2000, 0]);
 
-        let results = [ 97, 91, 58, 84 ];    // la liste ne contient que des nombres
+        let results = [97, 91, 58, 84];    // la liste ne contient que des nombres
 
         let contacts = [
             { name: "Emmanuel", phone: "003311111111" },
@@ -24,9 +26,9 @@
             { name: "Sophie", phone: "00328888888" },
         ];
 
-        console.log("programmation structurée");
+        console.log("programmation procédurale");
         for (let i = 0; i < results.length; ++i) {
-            console.log( results[i] );
+            console.log(results[i]);
         }
 
         console.log("programmation fonctionnelle");
@@ -44,7 +46,7 @@
         });
 
         console.log("en utilisant une fonction flèchée (arrow function // dans les autres langages function lambda");
-        results.forEach( (item) => console.log(item) );
+        results.forEach((item) => console.log(item));
 
         document.addEventListener('click', test);
         function test(ev) {
@@ -54,7 +56,8 @@
         document.addEventListener('click', function (ev) { console.log('event listener anonyme', ev.x); });
 
         document.addEventListener('click', (ev) => console.log('event listener fléché', ev.x));
- 
+
     </script>
 </body>
+
 </html>
