@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="javascript:void(0)">Cliquer ici pour ne rien faire</a>
+    <script>
+    // utilisation de l'opérateur logique ou || pour donner une valeur par défaut
+    function add(a, b) {
+        a = a || 1;     // 1 est valeur par défaut de la variable a
+        b = b || 1;     // 1 est valeur par défaut de la variable b
+        return a + b;
+    }
+
+    // utilisation normale:
+    console.log( add(10, 20) );         // => 30
+    console.log( add(10) );             // => 11
+    console.log( add(undefined, 20) );  // => 21
+    console.log( add() );                // 2
+
+    // opérateur conditionnel ternaire
+    let age = 20;
+    let statut = (age >= 18) ? "adulte" : "mineur";
+    // code correspondant avec if else
+    if (age >= 18) {
+        statut = "adulte";
+    } else {
+        statut = "mineur";
+    }
+
+    </script>
+</body>
+</html>

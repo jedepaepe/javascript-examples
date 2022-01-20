@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            /* Vertical */
+        }
+
+        .content>* {
+            flex: 0 0 33%;
+        }
+
+        .cell {
+            border: 1px solid #000;
+            height: 200px;
+            width: 200px;
+            font-size: 200px;
+            line-height: 200px;
+            font-weight: 400;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div>Player <span id="player">X</span> </div>
+
+    <div class="content">
+        <div class="cell"  id="d0" onclick="checkAndChecked(0)"></div>
+        <div class="cell"  id="d1" onclick="checkAndChecked(1)"></div>
+        <div class="cell"  id="d2" onclick="checkAndChecked(2)"></div>
+        <div class="cell"  id="d3" onclick="checkAndChecked(3)"></div>
+        <div class="cell"  id="d4" onclick="checkAndChecked(4)"></div>
+        <div class="cell"  id="d5" onclick="checkAndChecked(5)"></div>
+        <div class="cell"  id="d6" onclick="checkAndChecked(6)"></div>
+        <div class="cell"  id="d7" onclick="checkAndChecked(7)"></div>
+        <div class="cell"  id="d8" onclick="checkAndChecked(8)"></div>
+    </div>
+    <script>
+        var cells = Array.from(document.querySelectorAll(".cell"));
+        var player1 = "X";
+        var player2 = "O";
+        var currentPlayer = player1;
+        var winner = "";
+        const winningConditions = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+
+        function reset() {
+            let cell = document.getElementsByClassName("cell");
+            for (var i = 0; i < cell.length; i++) {
+                cell[i].innerHTML = "";
+                cell[i].style.backgroundColor = "";
+            }
+        }
+
+        function checkResult(winningConditions, curentPlayer) {
+            winningConditions.forEach(function(conditionDefinition) {
+                var count = 0;
+                conditionDefinition.forEach(function(elem) {
+                    if (cells[elem].innerHTML === curentPlayer) {
+                        count++;
+                        if (count == 3) {
+                            winner = curentPlayer;
+                            alert('winner: ' + winner);
+                            reset();
+                            return;
+                        }
+                    }
+                });
+            });
+        }
+
+
+        function checkAndChecked(index) {
+            let element = document.getElementById('d' + index);
+            if (element.style.backgroundColor == '') {
+                player.innerText = currentPlayer;
+                element.style.backgroundColor = (currentPlayer == "O") ? "red" : "yellow";
+                element.textContent = currentPlayer;
+                checkResult(winningConditions, currentPlayer);
+                currentPlayer = (currentPlayer === player1) ? player2 : player1;
+            }
+        }
+    </script>
+</body>
+
+</html>

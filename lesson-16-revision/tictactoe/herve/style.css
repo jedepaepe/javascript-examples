@@ -1,0 +1,35 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+}
+
+.title {
+    position: fixed;
+    margin-left: 95px;
+    font-size: 60px;
+}
+
+.square {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+    border: blue 0.4em groove;
+    height: 100px;
+    width: 100px;
+    position : fixed;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+.result {
+    margin-left: 95px;
+    margin-top: 500px;
+    position:fixed;
+    font-size: 40px;
+}
+
+.result-button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+    margin-top: 600px;
+    margin-left: 95px;
+    cursor: pointer;
+}
