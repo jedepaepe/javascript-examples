@@ -1,0 +1,18 @@
+.board {
+    position: relative;
+}
+
+.box {
+    display: inline-block;
+    height: 50px;
+    position: fixed;
+    width: 50px;
+}
+
+.box.snake {
+    background-color: yellowgreen;
+}
+
+.box.food {
+    background-color: yellow;
+}
