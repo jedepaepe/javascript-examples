@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let albert = {
+            firstname: 'Albert',
+            lastname: 'Einstein',
+            fullname: function () {
+                return `${this.firstname} ${this.lastname}`;
+            }
+        };
+
+        console.log(albert.firstname);
+        console.log(albert.lastname);
+        console.log(albert.fullname());
+
+        let rect = {
+            x: 100,
+            y: 200,
+            width: 200,
+            height: 300,
+            color: 'yellow',
+
+            draw: function () {
+                console.log(this);
+                let div = document.createElement('div');
+                div.style.position = 'fixed';
+                div.style.left = this.x + 'px';
+                div.style.top = this.y + 'px';
+                div.style.backgroundColor = this.color;
+                div.style.height = this.height + 'px';
+                div.style.width = this.width + 'px';
+                document.body.append(div);
+            }
+        };
+        rect.draw();
+
+        let point = { x: 100, y: 200 };
+
+        let ville = {
+            name: 'Saint-Josse',
+            code: '1170',
+            nrHabitants: 40000,
+            rue1: {
+                name: 'Avenue de l\'Astronomie',
+                batiment1: {
+                    name: 'EPFC',
+                    numero: 100,
+                    role: 'ecole',
+                },
+                batiment2: {
+                    name: 'Albert',
+                    numero: 102,
+                    quality: 'very good',
+                    nrHabitant: 4,
+                },
+            },
+            rue2: {
+                name: 'Avenue du Roi',
+                batiment: {
+                    name: 'Du roi',
+                    numero: 1,
+                    nrEtage: 10,
+                    superficie: 2000,
+                },
+            },
+            rue: {
+                name: 'Rue de javascript',
+            }
+        };
+    </script>
+</body>
+</html>

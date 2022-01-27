@@ -1,0 +1,29 @@
+{
+    "name": "Saint-Josse",
+    "code": "1170",
+    "nrHabitants": 40000,
+    "exist": true,
+    "rue1": {
+        "name": "Avenue de l Astronomie",
+        "batiment1": {
+            "name": "EPFC",
+            "numero": 100,
+            "role": "ecole"
+        },
+        "batiment2": {
+            "name": "Albert",
+            "numero": 102,
+            "quality": "very good",
+            "nrHabitant": 4
+        }
+    },
+    "rue2": {
+        "name": "Avenue du Roi",
+        "batiment": {
+            "name": "Du roi",
+            "numero": 1,
+            "nrEtage": 10,
+            "superficie": 2000
+        }
+    }
+}
