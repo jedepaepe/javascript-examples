@@ -52,7 +52,7 @@ app.listen(port, () => {
 });
 ```
 
-Voir [express Hello world](https://expressjs.com/fr/starter/hello-world.html) et le code sur github (express-app)
+Voir [express Hello world](https://expressjs.com/fr/starter/hello-world.html) et le code sur github [express-app](https://github.com/jedepaepe/javascript-examples/tree/main/lesson-18-expressjs/express-app).
 
 ## écrire un serveur web statique avec express ##
 Nous codons le fichier server.js (ou autre):
@@ -69,4 +69,4 @@ app.listen(port, () => {
 ```
 
 Voir [express fichiers statiques](https://expressjs.com/fr/starter/static-files.html)
-et le code sur github (static-server).
+et le code sur github [static-server](https://github.com/jedepaepe/javascript-examples/tree/main/lesson-18-expressjs/static-server).
