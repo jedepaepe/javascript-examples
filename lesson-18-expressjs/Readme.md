@@ -1,5 +1,10 @@
 # quick start express#
 
+## architecture web ##
+Voici un exemple classique d'architecture web
+
+![architecture](lesson-18-express-architecture-general.drawio.png)
+
 ## creation du projet ##
 
 ```
