@@ -9,5 +9,5 @@ Basé sur
 ## installation ##
 - copie le code (ou clone)
 - tape ```npm install```
-- tape ```node install```
+- tape ```node server.js```
 
