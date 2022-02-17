@@ -1,0 +1,22 @@
+{
+    "id": 1,
+    "client" : {
+        "id": 11,
+        "numero": "543-1236",
+        "name": "EPFC"
+    },
+    "products": [
+        {
+            "id": 101,
+            "label": "fleurs",
+            "price": 1,
+            "quantity": 10
+        },
+        {
+            "id": 102,
+            "label": "salades",
+            "price": 2,
+            "quantity": 2 
+        }
+    ]
+}
