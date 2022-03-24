@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un jeu</title>
+</head>
+<body>
+    <div>
+        <h1>Insertion d'un nouveau jeu</h1>
+        <form>
+            <div>
+                <label for="status">état</label>
+                <input type="text" name="status" id="status" placeholder="X-O--X-O-">
+            </div>
+            <div>
+                <label for="playerX">joueur X</label>
+                <input type="text" name="playerX" id="playerX" placeholder="Patricia">
+            </div>
+            <div>
+                <label for="playerO">joueur O</label>
+                <input type="text" name="playerO" id="playerO" placeholder="Sylvain">
+            </div>
+            <div>
+                <button type="button" id="submit">enregistrer</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        let button = document.getElementById('submit');
+        button.addEventListener('click', postForm);
+
+        function postForm() {
+            let game = {
+                status: document.getElementById('status').value,
+                playerX: document.getElementById('playerX').value,
+                playerO: document.getElementById('playerO').value
+            };
+
+            fetch('api/games', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(game)
+            })
+            .then(response => console.log(response))
+            .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>
