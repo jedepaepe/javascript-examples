@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -30,18 +30,31 @@ client.connect( (err, client) => {
         });
     });
 
-    // code de test
-    app.post('/process-form', (req, res) => {
-        console.error(req.body);
-        let game = req.body;
-        client.db('tictactoe').collection('games').insertOne(game, (error, result) => {
+    // HTTP DELETE pour supprimer un document
+    app.delete('/api/games/:id', (req, res) => {
+        client.db('tictactoe').collection('games').deleteOne({_id: ObjectId(req.params.id)}, (error, result) => {
             if (error) {
                 console.error(error);
-                res.status = 500;
-                res.send('error');
+                res.statusCode = 500;
+                res.json({success: false, message: 'error'});
             }
-            res.status = 201;
-            res.send('document saved');
+            res.statusCode = 200;
+            res.json({success: true, message: 'document deleted'});
+        });
+    });
+
+    // HTTP PUT pour ajouter un document
+    app.put('/api/games/:id', (req, res) => {
+        let id = req.params.id;
+        let game = req.body;
+        client.db('tictactoe').collection('games').replaceOne({_id: ObjectId(req.params.id)}, game, (error, result) => {
+            if (error) {
+                console.error(error);
+                res.statusCode = 500;
+                res.json({success: false, message: 'error'});
+            }
+            res.statusCode = 204; // la ressource a été mise à jour avec succès
+            res.json({success: true, message: 'document updated'});
         });
     });
 
