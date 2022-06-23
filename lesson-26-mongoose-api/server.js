@@ -17,8 +17,11 @@ const contactSchema = mongoose.Schema({
 const Contact = mongoose.model('contacts', contactSchema);
 
 const app = express();
-app.use(cors);
+app.use(cors());
 app.use(express.json());
+
+// uniquement pour tester
+app.get('/', (req, res) => res.send('pong'));
 
 app.get('/api/contacts', async (req, res) => {
     console.log('get');
