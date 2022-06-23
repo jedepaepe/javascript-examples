@@ -24,7 +24,6 @@ app.use(express.json());
 app.get('/', (req, res) => res.send('pong'));
 
 app.get('/api/contacts', async (req, res) => {
-    console.log('get');
     const contacts = await Contact.find({});
     res.json(contacts);
 });
